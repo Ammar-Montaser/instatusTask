@@ -1,8 +1,20 @@
+"use client";
 import { Event } from "@/app/core/types/types";
-import React from "react";
-function expandableTableRow(event: Event) {
+import React, { Dispatch, SetStateAction } from "react";
+export default function NormalTableRow({
+  event,
+  setter,
+}: {
+  event: Event;
+  setter: Dispatch<SetStateAction<string>>;
+}) {
   return (
-    <tr key={event.id} className="flex items-center h-[54px]  active:bg-black">
+    <tr
+      className="flex items-center h-[54px] "
+      onClick={() => {
+        setter(event.id);
+      }}
+    >
       <td className="w-1/3">
         <div className="flex">
           <div className="  w-[25px] h-[25px] rounded-full bg-gradient-to-br from-[#F3994A] to-[#B325E2]">
@@ -48,5 +60,3 @@ function expandableTableRow(event: Event) {
     </tr>
   );
 }
-
-export default expandableTableRow;

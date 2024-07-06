@@ -6,6 +6,9 @@ import { Event } from "./core/types/types";
 import NormalTableRow from "@/components/normalTableRow";
 import ExpandedTable from "@/components/expandedTableRow";
 
+// import { useCallback } from "react";
+// import { saveAs } from "file-saver";
+
 export default function Home() {
   const fetcher = (...args: Parameters<typeof fetch>) =>
     fetch(...args).then((res) => res.json());
@@ -14,10 +17,23 @@ export default function Home() {
   const [expandedRow, setExpandedRow] = useState("");
   const [page, setPage] = useState(1);
   const [limit, setLimit] = useState(11);
-  const { data } = useSWR(
+  const { data, error, isLoading } = useSWR(
     `/api/events?page=${page}&limit=${limit}&search=${search}`,
     fetcher
   );
+
+  // <<<<<<<<<<<<<CSV export feature>>>>>
+  // const exportToCSV = useCallback(async () => {
+  //   const response = await fetch(`/api/events?search=${search}`);
+  //   const events = await response.json();
+  //   const csvData = events.events.map((event: Event) =>
+  //     Object.values(event).join(",")
+  //   );
+  //   const blob = new Blob([csvData.join("\n")], { type: "text/csv" });
+  //   const fileName = "events.csv";
+  //   saveAs(blob, fileName);
+  // }, [search]);
+
   return (
     <main className="flex flex-col min-h-screen">
       <div className="flex flex-col justify-between m-auto w-[933px] min-h-[743px]  bg-[#ffff] rounded-[15px] border border-[#F0F0F0] ">
@@ -49,6 +65,20 @@ export default function Home() {
 
         <table className=" w-[899px]  mx-auto flex flex-col min-h-[583px] ">
           <tbody className="flex flex-col">
+            {error && (
+              <tr>
+                <td className="min-h-[583px] h-full w-full flex flex-col  items-center justify-center">
+                  failed to load
+                </td>
+              </tr>
+            )}
+            {isLoading && (
+              <tr>
+                <td className="min-h-[583px] h-full w-full flex flex-col  items-center justify-center">
+                  loading...
+                </td>
+              </tr>
+            )}
             {data &&
               data?.events?.map((event: Event) => {
                 if (event.id === expandedRow) {
@@ -78,6 +108,11 @@ export default function Home() {
           >
             LOAD MORE
           </button>
+          {/* 
+          <<<<<<<<<<<<<<<<<CSV export Button Test>>>>>>>>>>>>>>>
+          <button className="text-[#616161] ml-[100px]" onClick={exportToCSV}>
+            EXPORT TO CSV
+          </button> */}
         </div>
       </div>
     </main>

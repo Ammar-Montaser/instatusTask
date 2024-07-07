@@ -1,6 +1,6 @@
 -- CreateTable
 CREATE TABLE "Event" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+    "id" TEXT NOT NULL,
     "object" TEXT NOT NULL,
     "actorId" TEXT NOT NULL,
     "actorName" TEXT NOT NULL,
@@ -10,6 +10,8 @@ CREATE TABLE "Event" (
     "targetId" TEXT NOT NULL,
     "targetName" TEXT NOT NULL,
     "location" TEXT NOT NULL,
-    "occurredAt" DATETIME NOT NULL,
-    "metadata" TEXT NOT NULL
+    "occurredAt" TIMESTAMP(3) NOT NULL,
+    "metadata" TEXT NOT NULL,
+
+    CONSTRAINT "Event_pkey" PRIMARY KEY ("id")
 );

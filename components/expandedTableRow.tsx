@@ -38,10 +38,12 @@ function ExpandedTable({
             </div>
             <h6 className="mt-[37px]">METADATA</h6>{" "}
             <div className="flex flex-row pt-[12px]">
-              <p className="text-[#929292] font-normal w-[39px]">ID</p>
+              <div className="w-[188px] h-[14px] mt-1 bg-[#F8F8F8]  rounded-[2px] animate-pulse"></div>
+              {/*Uncomment below to test with data and comment the above line */}
+              {/* <p className="text-[#929292] font-normal w-[39px]">ID</p>
               <p className="text-black font-normal ml-[40px]">
                 {event.metadata.x_request_id}
-              </p>
+              </p> */}
             </div>
           </div>
         </td>
@@ -66,10 +68,12 @@ function ExpandedTable({
             </div>
             <h6 className="mt-[37px]">TARGET</h6>
             <div className="flex flex-row pt-[12px]">
-              <p className="text-[#929292] font-normal w-[39px]">ID</p>
+              <div className="w-[188px] h-[14px] mt-1 bg-[#F8F8F8]  rounded-[2px] animate-pulse"></div>
+              {/*Uncomment below to test with data and comment the above line */}
+              {/* <p className="text-[#929292] font-normal w-[39px]">ID</p>
               <p className="text-black font-normal ml-[40px]">
                 {event.targetId}
-              </p>
+              </p> */}
             </div>
           </div>
         </td>

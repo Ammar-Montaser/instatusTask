@@ -48,7 +48,7 @@ export default function Home() {
                 setSearch(e.target.value);
               }}
               placeholder="Search name, email or action..."
-              className="w-[899px] h-[45px] mt-4 px-4 bg-[#F5F5F5] border border-[#E0E0DF] rounded-[8px] m-auto"
+              className="w-[899px] h-[45px] mt-4 px-4 bg-[#F5F5F5] border border-[#E0E0DF] hover:border-[#bebebe] rounded-[8px] m-auto"
             />
           </div>
           <div className="flex flex-row h-[47px] w-[899px] items-center justify-center m-auto ">

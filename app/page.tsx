@@ -37,7 +37,7 @@ export default function Home() {
 
   return (
     <main className="flex flex-col min-h-screen">
-      <div className="flex flex-col justify-between m-auto w-[933px] min-h-[743px]  bg-[#ffff] rounded-[15px] border border-[#F0F0F0] ">
+      <div className="flex flex-col justify-between m-auto w-[933px] mt-10 mb-10 bg-[#ffff] rounded-[15px] border border-[#F0F0F0] ">
         <div className="flex flex-col w-full h-[108px]  bg-[#F5F5F5]  rounded-t-[15px]">
           <div className="  flex flex-row  justify-start items-center m-auto">
             <input

@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Event } from "./core/types/types";
 import NormalTableRow from "@/components/normalTableRow";
 import ExpandedTable from "@/components/expandedTableRow";
+import LoadingSkeleton from "@/components/loadingSkeleton";
 
 // import { useCallback } from "react";
 // import { saveAs } from "file-saver";
@@ -72,13 +73,10 @@ export default function Home() {
                 </td>
               </tr>
             )}
-            {isLoading && (
-              <tr>
-                <td className="min-h-[583px] h-full w-full flex flex-col  items-center justify-center">
-                  loading...
-                </td>
-              </tr>
-            )}
+            {isLoading &&
+              Array.from({ length: limit }, (_, index) => (
+                <LoadingSkeleton key={index} />
+              ))}
             {data &&
               data?.events?.map((event: Event) => {
                 if (event.id === expandedRow) {

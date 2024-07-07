@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "User Activity Dashboard",
   description: "This is a simple user activity dashboard ",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

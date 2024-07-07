@@ -79,7 +79,7 @@ export default function Home() {
             {error && (
               <tr>
                 <td className="min-h-[583px] h-full w-full flex flex-col  items-center justify-center">
-                  failed to load
+                  Failed to load
                 </td>
               </tr>
             )}

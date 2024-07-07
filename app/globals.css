@@ -25,6 +25,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+input:focus {
+  outline: none;
+}
 
 @layer utilities {
   .text-balance {

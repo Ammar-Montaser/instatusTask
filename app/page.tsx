@@ -17,7 +17,7 @@ export default function Home() {
   const [search, setSearch] = useState("");
   const [expandedRow, setExpandedRow] = useState("");
   const [page, setPage] = useState(1);
-  const [limit, setLimit] = useState(11);
+  const [limit, setLimit] = useState(8);
   const { data, error, isLoading } = useSWR(
     `/api/events?page=${page}&limit=${limit}&search=${search}`,
     fetcher
@@ -96,6 +96,10 @@ export default function Home() {
                   />
                 );
               })}
+            {data?.events?.length < 11 &&
+              Array.from({ length: 11 - data?.events?.length }, (_, index) => (
+                <LoadingSkeleton key={index} />
+              ))}
           </tbody>
         </table>
         <div className="h-[52px] flex items-center justify-center bg-[#F5F5F5]  rounded-b-[15px]">

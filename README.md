@@ -10,7 +10,7 @@
 
 <h2>Project Screenshots:</h2>
 
-<img src="https://i.postimg.cc/NFmnnQzr/Screenshot-2024-07-06-at-6-21-47-PM.png" alt="project-screenshot" width="100%" height="600/">
+<img src="https://i.postimg.cc/NFmnnQzr/Screenshot-2024-07-06-at-6-21-47-PM.png" alt="project-screenshot" width="100%" height="700/">
 
   
   
@@ -60,7 +60,9 @@ http://localhost:3000
 }
 ```
 <h2>Why I should get hired?:</h2>
-*   Self Driven: I don't need continuous instructions or spoon feeding. I am self motivated and self critical, I know how to find and learn the things I need to complete any given task. 
+
+```
+*   Self Driven - I don't need continuous instructions or spoon feeding. I am self motivated and self critical, I know how to find and learn the things I need to complete any given task. 
 *   Perfectionist - I don't settle for less, I always believe that no matter what I do there's always more room for improvement. 
 *   Entrepreneurial Mindset - I have an entrepreneurial mindset which helps me see things from both technical and business perspective.
 *   Determined - I am always determined to do the best I can in work and my personal life in general.
@@ -68,8 +70,9 @@ http://localhost:3000
 *   Quick Learner - I can learn any new topic in a short period of time, just give me the key words and I'll dig through Google and do my own research. 
 *   Open to Criticism - I highly encourage criticism, it drives me to get better and improve.
 *   Cultural Fit - I believe that I'm a close fit to Instatus and I believe that together we can achieve great things.
+```
 
-<img src="https://i.postimg.cc/KvscbNqc/8w9kxn.jpg" alt="hire me meme" width="100%" height="600/">
+<img src="https://i.postimg.cc/KvscbNqc/8w9kxn.jpg" alt="hire me meme" width="100%" height="700/">
 
   
   
